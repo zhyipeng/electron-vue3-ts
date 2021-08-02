@@ -6,9 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // eslint-disable-next-line no-restricted-syntax
   for (const type of ['chrome', 'node', 'electron']) {
-    // @ts-ignore
-    replaceText(`${type}-version`, process.versions[type]);
+    replaceText(`${type}-version`, process.versions[type] || '');
   }
 });
