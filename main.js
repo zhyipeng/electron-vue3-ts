@@ -8,9 +8,12 @@ function createWindow() {
             preload: path.join(__dirname, 'preload.js')
         }
     });
-    win.loadFile('dist/index.html');
+    var winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : "file://" + __dirname + "/dist/index.html";
+    // win.loadFile('dist/index.html');
+    win.loadURL(winURL);
 }
-app.whenReady().then(function () {
+app.whenReady()
+    .then(function () {
     createWindow();
     app.on('activate', function () {
         if (BrowserWindow.getAllWindows().length === 0) {
