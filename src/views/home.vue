@@ -1,5 +1,7 @@
 <template>
-  <h1>Hello World.</h1>
+  <div>
+    <h1 class="title">Hello World.</h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -10,5 +12,14 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$font-color: green;
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: $font-color;
+}
 </style>

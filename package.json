@@ -1,17 +1,14 @@
 {
-  "name": "notes",
+  "name": "electron-vue3-ts-demo",
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
-    "serve": "vite preview",
     "start": "NODE_ENV=development electron-forge start",
     "package": "NODE_ENV=prod electron-forge package",
-    "make": "NODE_ENV=pord electron-forge make"
+    "make": "vue-tsc --noEmit --skipLibCheck && vite build && NODE_ENV=pord electron-forge make"
   },
   "dependencies": {
-    "@kangc/v-md-editor": "^2.3.7",
     "electron-squirrel-startup": "^1.0.0",
     "element-plus": "^1.0.2-beta.65",
     "vue": "^3.0.5",
@@ -32,6 +29,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-vue": "^7.15.0",
+    "sass": "^1.42.1",
     "typescript": "^4.3.2",
     "vite": "^2.4.4",
     "vue-tsc": "^0.2.2"

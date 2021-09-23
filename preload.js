@@ -7,6 +7,6 @@ window.addEventListener('DOMContentLoaded', function () {
     };
     for (var _i = 0, _a = ['chrome', 'node', 'electron']; _i < _a.length; _i++) {
         var type = _a[_i];
-        replaceText(type + "-version", process.versions[type]);
+        replaceText(type + "-version", process.versions[type] || '');
     }
 });

@@ -4,11 +4,12 @@ function createWindow() {
     var win = new BrowserWindow({
         width: 800,
         height: 600,
+        frame: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
     });
-    var winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : "file://" + __dirname + "/dist/index.html";
+    var winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3456' : "file://" + __dirname + "/dist/index.html";
     // win.loadFile('dist/index.html');
     win.loadURL(winURL);
 }

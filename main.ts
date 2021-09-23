@@ -13,7 +13,7 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
-  const winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : `file://${__dirname}/dist/index.html`;
+  const winURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3456' : `file://${__dirname}/dist/index.html`;
   // win.loadFile('dist/index.html');
   win.loadURL(winURL);
 }
